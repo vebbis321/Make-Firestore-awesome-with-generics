@@ -14,19 +14,7 @@ final class CreateViewModel: ObservableObject {
     @Published var message = ""
     @Published var toDo = ""
 
-    private let userService: UserServiceProtocol
-    private let toDoService: ToDoServiceProtocol
-    private let messageService: MessageServiceProtocol
-
-    init(
-        userService: UserServiceProtocol,
-        toDoService: ToDoServiceProtocol,
-        messageService: MessageServiceProtocol
-    ) {
-        self.userService = userService
-        self.toDoService = toDoService
-        self.messageService = messageService
-    }
+    private let db = Firestore.firestore()
 
     let itemViewModels: [FormItemViewModel] = [
         .init(type: .user),
@@ -36,17 +24,26 @@ final class CreateViewModel: ObservableObject {
 
     @MainActor
     func create(type: InputType) async {
+
         Task {
+            var model: any Codable
+            var path: String
+
             do {
                 switch type {
                 case .user:
-                    try await userService.create(user: .init(name: name))
-                case .toDo:
-                    try await toDoService.create(toDo: .init(task: toDo))
-                case .message:
-                    try await messageService.create(message: .init(message: message))
-                }
+                    model = UserPublic(name: name)
+                    path = "users"
 
+                case .toDo:
+                    model = ToDo(task: toDo)
+                    path = "toDos"
+
+                case .message:
+                    model = Message(message: message)
+                    path = "messages"
+                }
+                try await db.create(path: path, model: model)
             } catch {
                 print(error)
             }

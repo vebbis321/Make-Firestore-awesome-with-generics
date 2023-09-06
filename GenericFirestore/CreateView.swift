@@ -10,9 +10,6 @@ import SwiftUI
 struct CreateView: View {
 
     @StateObject var viewModel = CreateViewModel(
-        userService: UserService(),
-        toDoService: ToDoService(),
-        messageService: MessageService()
     )
 
     var body: some View {

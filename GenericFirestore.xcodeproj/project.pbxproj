@@ -11,10 +11,8 @@
 		23C06BF42AA8B0A7001B4D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C06BF32AA8B0A7001B4D75 /* Assets.xcassets */; };
 		23C06BF72AA8B0A7001B4D75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C06BF62AA8B0A7001B4D75 /* Preview Assets.xcassets */; };
 		23C06C032AA8B0BC001B4D75 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06BFD2AA8B0BC001B4D75 /* CreateViewModel.swift */; };
-		23C06C042AA8B0BC001B4D75 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06BFE2AA8B0BC001B4D75 /* MessageService.swift */; };
-		23C06C052AA8B0BC001B4D75 /* ToDoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06BFF2AA8B0BC001B4D75 /* ToDoService.swift */; };
 		23C06C062AA8B0BC001B4D75 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06C002AA8B0BC001B4D75 /* Models.swift */; };
-		23C06C072AA8B0BC001B4D75 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06C012AA8B0BC001B4D75 /* UserService.swift */; };
+		23C06C072AA8B0BC001B4D75 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06C012AA8B0BC001B4D75 /* FirestoreService.swift */; };
 		23C06C082AA8B0BC001B4D75 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C06C022AA8B0BC001B4D75 /* CreateView.swift */; };
 		23C06C0B2AA8B13D001B4D75 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23C06C0A2AA8B13D001B4D75 /* FirebaseFirestore */; };
 		23C06C0D2AA8B13D001B4D75 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23C06C0C2AA8B13D001B4D75 /* FirebaseFirestoreSwift */; };
@@ -27,10 +25,8 @@
 		23C06BF32AA8B0A7001B4D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C06BF62AA8B0A7001B4D75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23C06BFD2AA8B0BC001B4D75 /* CreateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
-		23C06BFE2AA8B0BC001B4D75 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
-		23C06BFF2AA8B0BC001B4D75 /* ToDoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoService.swift; sourceTree = "<group>"; };
 		23C06C002AA8B0BC001B4D75 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		23C06C012AA8B0BC001B4D75 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		23C06C012AA8B0BC001B4D75 /* FirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		23C06C022AA8B0BC001B4D75 /* CreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		23C06C0E2AA8B19D001B4D75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,10 +66,8 @@
 				23C06BEF2AA8B0A6001B4D75 /* GenericFirestoreApp.swift */,
 				23C06C022AA8B0BC001B4D75 /* CreateView.swift */,
 				23C06BFD2AA8B0BC001B4D75 /* CreateViewModel.swift */,
-				23C06BFE2AA8B0BC001B4D75 /* MessageService.swift */,
 				23C06C002AA8B0BC001B4D75 /* Models.swift */,
-				23C06BFF2AA8B0BC001B4D75 /* ToDoService.swift */,
-				23C06C012AA8B0BC001B4D75 /* UserService.swift */,
+				23C06C012AA8B0BC001B4D75 /* FirestoreService.swift */,
 				23C06BF32AA8B0A7001B4D75 /* Assets.xcassets */,
 				23C06C0E2AA8B19D001B4D75 /* GoogleService-Info.plist */,
 				23C06BF52AA8B0A7001B4D75 /* Preview Content */,
@@ -167,11 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23C06C072AA8B0BC001B4D75 /* UserService.swift in Sources */,
+				23C06C072AA8B0BC001B4D75 /* FirestoreService.swift in Sources */,
 				23C06C032AA8B0BC001B4D75 /* CreateViewModel.swift in Sources */,
 				23C06C082AA8B0BC001B4D75 /* CreateView.swift in Sources */,
-				23C06C042AA8B0BC001B4D75 /* MessageService.swift in Sources */,
-				23C06C052AA8B0BC001B4D75 /* ToDoService.swift in Sources */,
 				23C06C062AA8B0BC001B4D75 /* Models.swift in Sources */,
 				23C06BF02AA8B0A6001B4D75 /* GenericFirestoreApp.swift in Sources */,
 			);
